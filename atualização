@@ -159,7 +159,7 @@ while resp != '0':
                 print('Temos 100 livros disponíveis deste estilo na biblioteca')
         elif genero == 'Criminal':
             print('Temos 100 livros disponíveis deste estilo na biblioteca')
-        elif genero == 'Lógica de progamação':
+        elif genero == 'Lógica de programação':
                 print('Você está com sorte! Temos apenas 1 cópia em estoque!')
         elif genero == 'Algoritmos':
             print('Você está com sorte! Temos apenas 1 cópia em estoque!')
