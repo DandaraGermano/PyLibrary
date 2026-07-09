@@ -1,0 +1,295 @@
+from datetime import datetime, date, time, timedelta
+
+resp = ''
+while resp != '0':
+    print('                                     ')
+    print(  ' 𓂃˖˳·˖ ִֶָ ⋆📖⋆ ִֶָ˖·˳˖𓂃 ִֶ    ָ')
+    print('                                     ')
+    print('Bem-vindo(a) à PyLibrary!')
+    print('                                     ')
+    print("[ ▶︎ ]      1 - Módulo Leitor         ")
+    print("[ ▶︎ ]      2 - Módulo Bibliotecário     ")
+    print("[ ▶︎ ]      3 - Módulo Gêneros Textuais         ")
+    print("[ ▶︎ ]      4 - Módulo Retirada de livros     ")
+    print("[ ▶︎ ]      5 - Módulo Informações e horários   ")
+    print("[ ▶︎ ]      0 - Sair                 ")
+    print('                                             ')
+    resp = input('✎𓂃Por favor, selecione o que deseja: ')
+
+    if resp == '1':
+        print()
+        print("﹌﹌﹌﹌﹌﹌﹌")
+        print("⬩➤ 1: Módulo leitor")
+        print('                                             ')
+        print("[ ▶︎ ]      a ) Cadastrar leitor         ")
+        print("[ ▶︎ ]      b ) Exibir dados do leitor         ")
+        print("[ ▶︎ ]      c ) Alterar dados do leitor         ")
+        print("[ ▶︎ ]      d ) Excluir dados do leitor         ")
+        print('                                             ')
+        escolha = input('✎𓂃Por favor, selecione o que deseja: ')
+        print()
+
+        if escolha == 'a': 
+            nome = input('› Digite seu nome completo:   ')
+            print()
+            mat = input('› Insira o número de matrícula:    ')
+            print()
+            email = input('Digite seu Email:    ')
+            print()
+            contato = input('Digite seu número de telefone para possível contato:   ')
+            listanomeleitor = [nome]
+            listamatleitor = [mat]
+            listemailleitor = [email]
+            listacontato = [contato]
+            leitorestudo = [nome,mat,email,contato]
+            print('Cadastro realizado:', leitorestudo)
+            print(' ⌗ ┆ Parabéns leitor (a), você agora faz parte da PyLibrary!')
+            print('                                             ')
+
+        elif escolha == 'b':
+            nome = input("Qual o nome completo do leitor procurado?:     ")
+            if nome in listanomeleitor:
+                print('Aqui está!:', leitorestudo)
+            else:
+                print('Leitor não encontrado')
+
+        elif escolha == 'c':
+
+            nome = input('› Digite seu nome completo:   ')
+            print()
+            mat = input('› Insira o número de matrícula:    ')
+            print()
+            email = input('Digite seu Email:    ')
+            print()
+            contato = input('Digite seu número de telefone para possível contato:   ')
+            listanomeleitor = [nome]
+            listamatleitor = [mat]
+            listemailleitor = [email]
+            listacontato = [contato]
+            leitorestudo = [nome,mat,email,contato]
+            print('Aqui estão seus dados:',leitorestudo)
+            print(' ⌗ ┆ Seus dados foram alterados com sucesso!!')
+             
+        elif escolha == 'd':
+            excmatricula = input('Digite o número de sua matrícula:')
+            if excmatricula in mat:
+                del [leitorestudo]
+                print('Tudo feito, sua matrícula foi deletada de nosso sistema' )
+                print('                                             ') 
+            elif excmatricula not in mat:
+                print('Perdão, não poderemos excluir o que deseja por não encontrarmos essa matrícula.')
+        else:
+            print('                                     ')
+            input('Aperte <ENTER> para continuar')
+            print()
+            print('                                             ')
+
+
+    elif resp == '2':
+        print()
+        print("﹌﹌﹌﹌﹌﹌﹌")
+        print("⬩➤ 2: Módulo Bibliotecário")
+        print('                                             ')
+        print("[ ▶︎ ]      a ) Cadastrar funcionário         ")
+        print("[ ▶︎ ]      b ) Exibir dados do funcionário         ")
+        print("[ ▶︎ ]      c ) Alterar dados do funcionário         ")
+        print("[ ▶︎ ]      d ) Excluir dados do funcionário         ")
+        print('                                             ')
+        escolha2 = input('✎𓂃Por favor, selecione o que deseja: ')
+        print()
+        if escolha2 == 'a' :
+            nome = input('› Digite seu nome completo:   ')
+            print()
+            cpf = input('› Insira o seu CPF:    ')
+            print()
+            cargo = input('Digite seu respectivo cargo:    ')
+            print()
+            contato = input('Digite seu número de telefone o / a contatarmos:   ')
+            listanomef = [nome]
+            listacpff = [cpf]
+            listacargof = [cargo]
+            listacontatof = [contato]
+            bibtudo = [nome,cpf,cargo,contato]
+            print('Olá!',bibtudo)
+            print('⌗ ┆ Parabéns bibliotecário, agora você faz parte da PyLibrary!')
+            print()
+            print('                                             ')
+        elif escolha2 == 'b':
+            nome = input("Qual o nome completo do funcionário procurado? ")
+            if nome in listanomef:
+                print('Aqui está!:', [bibtudo] )
+            else:
+                print('Bibliotecário não encontrado')
+                print()
+                print('                                             ')
+        elif escolha2 == 'c':
+            nome = input('› Digite seu nome completo:   ')
+            print()
+            cpf = input('› Insira o seu CPF:    ')
+            print()
+            cargo = input('Digite seu respectivo cargo:    ')
+            print()
+            contato = input('Digite seu número de telefone o / a contatarmos:   ')
+            print()
+            print('⌗ ┆ Seu cadastro foi alterado com sucesso!')
+            print('                                             ')
+            listanomef = [nome]
+            listacpff = [cpf]
+            listacargof = [cargo]
+            listacontatof = [contato]
+            bibtudo = [nome,cpf,cargo,contato]
+
+        elif escolha2 == 'd':
+            excfunc = input('Digite o seu CPF')     
+            if excfunc in cpf :
+                del [bibtudo]
+                print('Tudo feito, seu cadastro profissional foi deletado de nosso sistema' ) 
+            elif excfunc not in cpf:
+                print('Perdão, não poderemos excluir o que deseja por não encontrarmos esse CPF.')
+        else:
+            print('                                     ')
+            input('Aperte <ENTER> para continuar')
+            print()
+            print('                                             ')
+
+    elif resp == '3':
+        print()
+        print("﹌﹌﹌﹌﹌﹌﹌")
+        print("⬩➤ 3: Módulo Gêneros textuais")
+        print('                                             ')
+        gen = input('Deseja visualizar nossos gêneros textuais?')
+        if gen == 'sim':
+            print('Nossos gêneros disponíveis são: 'Romance', 'Fantasia,'Terror','Lógica de programação' e 'Algoritmos')
+        elif gen == 'não':
+            print('Tudo bem! Siga adiante.')
+            print('                                             ')
+        genero = input('   › Qual o gênero de livro desejas ler?  ')
+        if genero == 'Romance':
+             print('Temos 580 livros disponíveis deste estilo na biblioteca')
+        elif genero == 'Fantasia':
+            print('Temos 580 livros disponíveis deste estilo na biblioteca')
+        elif genero == 'Terror':
+                print('Temos 100 livros disponíveis deste estilo na biblioteca')
+        elif genero == 'Criminal':
+            print('Temos 100 livros disponíveis deste estilo na biblioteca')
+        elif genero == 'Lógica de programação':
+                print('Você está com sorte! Temos apenas 1 cópia em estoque!')
+        elif genero == 'Algoritmos':
+            print('Você está com sorte! Temos apenas 1 cópia em estoque!')
+        else:
+            print('› Infelizmente não temos este estilo em estoque.')
+            print('                                     ')
+            input('Aperte <ENTER> para continuar')
+
+    if resp == "4":
+        print()
+        print("﹌﹌﹌﹌﹌﹌﹌")
+        print("⬩➤ 4: Módulo Retirada de livros")
+        print('                                             ')
+        print("[ ▶︎ ]      a ) Cadastrar o registro de retirada de livro         ")
+        print("[ ▶︎ ]      b ) Exibir dados da retirada         ")
+        print("[ ▶︎ ]      c ) Alterar dados da retirada         ")
+        print("[ ▶︎ ]      d ) Excluir dados da retirada         ")
+        print('                                             ')
+        escolha3 = input('✎𓂃Por favor, selecione o que deseja: ')
+        print()
+        if escolha3 == 'a':
+            id = input('Digite sua matrícula: ')
+            print('Prossiga para retirar seu livro')
+            livro = input('› Escreva o título da obra que deseja retirar:   ')
+            print()
+            hoje = hoje = date.today()
+            print('Certo, a data da sua retirada é:', hoje)
+            prazo = hoje + timedelta(days=45)
+            print('                                     ')
+            print('ⓘ A partir desta data de hoje, você tera este prazo para a entrega:  ', prazo)
+            print('⚠ Caso o prazo definido não seja obedecido, uma multa de R$50 será emitida ao leitor, correndo risco de suspensão de cadastro se não for paga.')
+            listaidentif = [id]
+            listalivro = [livro]
+            listadatahoje = [hoje]
+            listaprazo = [prazo]
+            livrostudo = [id,livro,hoje,prazo]
+        elif escolha3 == 'b':
+            acesso = input('Digite sua matrícula')
+            print()
+            if acesso in id:
+                print('Aqui estão as infos da sua retirada!;', [livrostudo])
+            else:
+                print('Desculpe-nos, não achamos o registro sobre sua retirada.')
+        elif escolha3 == 'c':
+            id = input('Digite sua matrícula: ')
+            print('Prossiga para retirar seu livro')
+            livro = input('› Escreva o título da obra que deseja retirar:   ')
+            print()
+            hoje = hoje = date.today()
+            print('Certo, a data da sua retirada é:', hoje)
+            prazo = hoje + timedelta(days=45)
+            print('                                     ')
+            print('ⓘ A partir desta data de hoje, você tera este prazo para a entrega:  ', prazo)
+            print('⚠ Caso o prazo definido não seja obedecido, uma multa de R$50 será emitida ao leitor, correndo risco de suspensão de cadastro se não for paga.')
+            print(' ⌗ ┆ O cadastro da sua retirada de livro foi alterado com sucesso!')
+            listaidentif = [id]
+            listalivro = [livro]
+            listadatahoje = [hoje]
+            listaprazo = [prazo]
+            livrostudo = [id,prazo,hoje,prazo]
+        elif escolha3 == 'd':
+            exclretirada = input('Digite sua matrícula:')     
+            if exclretirada in listaidentif :
+                del [livrostudo]
+                print('Pronto! Seu cadastro de retirada foi deletado de nosso sistema' ) 
+            elif exclretirada not in listaidentif:
+                print('Perdão, não poderemos excluir o que deseja por não te encontrarmos neste setor.')
+        else:
+            print('                                     ')
+            print('⌗ ┆ Aproveite sua leitura e volte sempre!')
+            input('Aperte <ENTER> para continuar')
+            print()
+            print('                                             ')
+
+    if resp == '5':
+        print()
+        print("﹌﹌﹌﹌﹌﹌﹌")
+        print("⬩➤ 5: Módulo Informações e horários")
+        print('                                     ')
+        print('. ݁₊ ⊹ Funcionamos de Segunda a Sábado, das 8:00 até às 22:00, sem horário de almoço .ᐟ')
+        print(""" Regras de nossa instituição: 
+            ╰┈➤  Proibido fumar ;
+                 Manter o silêncio em todos os horários ;
+                 Tenha zelo por nossos livros, leitores depois de você também os lerão ;
+                 Em caso de roubo, tomaremos todas as providências cabíveis, sujeito à denúncia policial ;
+                 E uma boa leitura a todos!! ࿐ ࿔* """)
+        print('                                     ')
+        input('Aperte <ENTER> para continuar')
+
+if resp == "0":
+    print()
+    print("﹌﹌﹌﹌﹌﹌﹌")
+    sair = input('⬩➤       Volte sempre, nossos livros estarão no seu aguardo!')
+    print()
+    print('                                     ')
+    input('Aperte <ENTER> para continuar')
+
+print('                                     ')
+print(" › Fim do programa! Espero que goste! ᯓ★ ")
+
+###################################################
+
+leitorestudo = {}
+arqleitores = open('leitores.csv','w')
+for linha in arqleitores:
+    arqleitores.write(leitorestudo)
+arqleitores.close()
+
+
+bibtudo = {}
+arqbib = open('bibliotecarios.csv','w')
+for linha in arqbib:
+    arqbib.write(bibtudo)
+arqbib.close()
+
+livrostudo = {}
+arqlivrosretirada= open('retirada.csv','w')
+for linha in arqbib:
+    arqbib.write(livrostudo)
+arqlivrosretirada.close()
