@@ -60,7 +60,7 @@ while resp != '0':
             print()
             contato = input('Digite seu número de telefone para possível contato:   ')
             print()
-            print('\t ⌗ ┆ Seus dados foram alterados com sucesso!!')
+            print(' ⌗ ┆ Seus dados foram alterados com sucesso!!')
             print()
             listanomeleitor = [nome]
             listamatleitor = [mat]
@@ -102,7 +102,7 @@ while resp != '0':
             print()
             contato = input('Digite seu número de telefone o / a contatarmos:   ')
             print()
-            print('\t ⌗ ┆ Parabéns bibliotecário, agora você faz parte da PyLibrary!')
+            print(' ⌗ ┆ Parabéns bibliotecário, agora você faz parte da PyLibrary!')
             print()
             print('                                             ')
             listanomef = [nome]
@@ -126,7 +126,7 @@ while resp != '0':
             print()
             contato = input('Digite seu número de telefone o / a contatarmos:   ')
             print()
-            print('\t ⌗ ┆ Seu cadastro foi alterado com sucesso!')
+            print('⌗ ┆ Seu cadastro foi alterado com sucesso!')
             print('                                             ')
             listanomef = [nome]
             listacpff = [cpf]
